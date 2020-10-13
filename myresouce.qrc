@@ -1,0 +1,45 @@
+<RCC>
+  <qresource prefix="pic">
+    <file>resouce/ActionLock.png</file>
+    <file>resouce/ActionWord.png</file>
+    <file>resouce/Sutherland-Hodgeman.png</file>
+    <file>resouce/ActionNicholl-Lee-Nicholl.png</file>
+    <file>resouce/ActionFill.png</file>
+    <file>resouce/ActionLast.png</file>
+    <file>resouce/ActionNext.png</file>
+    <file>resouce/ActionEraser.png</file>
+    <file>resouce/ActionBrush.png</file>
+    <file>resouce/ActionPencil.png</file>
+    <file>resouce/ActionRectangle.png</file>
+    <file>resouce/ActionTriangle.png</file>
+    <file>resouce/ActionNormal.png</file>
+    <file>resouce/ActionThin.png</file>
+    <file>resouce/actionCopy.png</file>
+    <file>resouce/actionPaste.png</file>
+    <file>resouce/ActionThick.png</file>
+    <file>resouce/ActionAbout.png</file>
+    <file>resouce/ActionMove.png</file>
+    <file>resouce/ActionRotate.png</file>
+    <file>resouce/ActionScale.png</file>
+    <file>resouce/ActionCohen-Sutherland.png</file>
+    <file>resouce/ActionLiang-Barsky.png</file>
+    <file>resouce/ActionChoose.png</file>
+    <file>resouce/ActionNew.png</file>
+    <file>resouce/ActionB_spline.png</file>
+    <file>resouce/ActionSave_as.png</file>
+    <file>resouce/ActionClear.png</file>
+    <file>resouce/ActionColor.png</file>
+    <file>resouce/ActionDDA.png</file>
+    <file>resouce/ActionBresenham.png</file>
+    <file>resouce/ActionDDA2.png</file>
+    <file>resouce/ActionBresenham2.png</file>
+    <file>resouce/ActionOval.png</file>
+    <file>resouce/ActionBezier.png</file>
+    <file>resouce/ActionExit.png</file>
+    <file>resouce/ActionUndo.png</file>
+    <file>resouce/ActionRedo.png</file>
+    <file>resouce/ProgressIcon.png</file>
+    <file>resouce/ActionOpen.png</file>
+    <file>resouce/ActionSave.png</file>
+  </qresource>
+</RCC>
