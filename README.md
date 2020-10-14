@@ -1,5 +1,5 @@
 # NJU_CG
-I finished a canvas in this course
+I finished a canvas in this course using python QT
 
 In addition to the functions mentioned in the report, I added an image encryption function
 
