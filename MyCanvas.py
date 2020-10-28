@@ -22,6 +22,7 @@ from PyQt5.QtWidgets import *
 from enum import Enum
 from Figure import MyLine,DrawingProcess,FigureType,MyPolygon,MyOval,MyCurve,MyPoint,MyPencilFigure,MyBrushFigure,MyEraserFigure,MyCharactor
 import copy
+from copy import deepcopy
 from PyQt5.QtWidgets import QMessageBox
 from numpy import *
 from pylab import *
@@ -225,7 +226,7 @@ class MyCanvas(QLabel):
                 tmp_pol=MyPolygon(0)
                 tmp_pol.setColor(255,0,0)
                 tmp_pol.isOperating=0
-                curr_fig=copy.deepcopy(self.parent.drawing_process.record_list[index][self.currentChoose])
+                curr_fig=deepcopy(self.parent.drawing_process.record_list[index][self.currentChoose])
                 xa=curr_fig.op_first_point.x
                 ya=curr_fig.op_first_point.y
                 xb=curr_fig.op_second_point.x
@@ -274,8 +275,9 @@ class MyCanvas(QLabel):
             if(self.parent.drawing_process.current_index==-1):
                 record_tmp=[]
             else:
-                record_tmp=copy.deepcopy(self.parent.drawing_process.record_list[self.parent.drawing_process.current_index])
+                record_tmp=deepcopy(self.parent.drawing_process.record_list[self.parent.drawing_process.current_index])
             record_tmp.append(tmp)
+
             self.parent.drawing_process.record_list.append(record_tmp)
             self.parent.drawing_state = DrawingState.LineDDA_Doing
             self.parent.statusBar.showMessage('(' + str(int(s.x())) + ',' + str(
@@ -296,7 +298,7 @@ class MyCanvas(QLabel):
             if (self.parent.drawing_process.current_index == -1):
                 record_tmp = []
             else:
-                record_tmp = copy.deepcopy(
+                record_tmp = deepcopy(
                     self.parent.drawing_process.record_list[self.parent.drawing_process.current_index])
             record_tmp.append(tmp)
             self.parent.drawing_process.record_list.append(record_tmp)
@@ -320,7 +322,7 @@ class MyCanvas(QLabel):
             if (self.parent.drawing_process.current_index == -1):
                 record_tmp = []
             else:
-                record_tmp = copy.deepcopy(
+                record_tmp = deepcopy(
                     self.parent.drawing_process.record_list[self.parent.drawing_process.current_index])
             record_tmp.append(tmp)
             self.parent.drawing_process.record_list.append(record_tmp)
@@ -365,7 +367,7 @@ class MyCanvas(QLabel):
             if (self.parent.drawing_process.current_index == -1):
                 record_tmp = []
             else:
-                record_tmp = copy.deepcopy(
+                record_tmp = deepcopy(
                     self.parent.drawing_process.record_list[self.parent.drawing_process.current_index])
             record_tmp.append(tmp)
             self.parent.drawing_process.record_list.append(record_tmp)
@@ -411,7 +413,7 @@ class MyCanvas(QLabel):
             if (self.parent.drawing_process.current_index == -1):
                 record_tmp = []
             else:
-                record_tmp = copy.deepcopy(
+                record_tmp = deepcopy(
                     self.parent.drawing_process.record_list[self.parent.drawing_process.current_index])
             record_tmp.append(tmp)
             self.parent.drawing_process.record_list.append(record_tmp)
@@ -433,7 +435,7 @@ class MyCanvas(QLabel):
             if (self.parent.drawing_process.current_index == -1):
                 record_tmp = []
             else:
-                record_tmp = copy.deepcopy(
+                record_tmp = deepcopy(
                     self.parent.drawing_process.record_list[self.parent.drawing_process.current_index])
             record_tmp.append(tmp)
             self.parent.drawing_process.record_list.append(record_tmp)
@@ -456,7 +458,7 @@ class MyCanvas(QLabel):
             if (self.parent.drawing_process.current_index == -1):
                 record_tmp = []
             else:
-                record_tmp = copy.deepcopy(
+                record_tmp = deepcopy(
                     self.parent.drawing_process.record_list[self.parent.drawing_process.current_index])
             record_tmp.append(tmp)
             self.parent.drawing_process.record_list.append(record_tmp)
@@ -479,7 +481,7 @@ class MyCanvas(QLabel):
             if (self.parent.drawing_process.current_index == -1):
                 record_tmp = []
             else:
-                record_tmp = copy.deepcopy(
+                record_tmp = deepcopy(
                     self.parent.drawing_process.record_list[self.parent.drawing_process.current_index])
             record_tmp.append(tmp)
             self.parent.drawing_process.record_list.append(record_tmp)
@@ -504,7 +506,7 @@ class MyCanvas(QLabel):
             if (self.parent.drawing_process.current_index == -1):
                 record_tmp = []
             else:
-                record_tmp = copy.deepcopy(
+                record_tmp = deepcopy(
                     self.parent.drawing_process.record_list[self.parent.drawing_process.current_index])
             record_tmp.append(tmp)
             self.parent.drawing_process.record_list.append(record_tmp)
@@ -527,7 +529,7 @@ class MyCanvas(QLabel):
             if (self.parent.drawing_process.current_index == -1):
                 record_tmp = []
             else:
-                record_tmp = copy.deepcopy(
+                record_tmp = deepcopy(
                     self.parent.drawing_process.record_list[self.parent.drawing_process.current_index])
             record_tmp.append(tmp)
             self.parent.drawing_process.record_list.append(record_tmp)
@@ -551,7 +553,7 @@ class MyCanvas(QLabel):
             if (self.parent.drawing_process.current_index == -1):
                 record_tmp = []
             else:
-                record_tmp = copy.deepcopy(
+                record_tmp = deepcopy(
                     self.parent.drawing_process.record_list[self.parent.drawing_process.current_index])
             record_tmp.append(tmp)
             self.parent.drawing_process.record_list.append(record_tmp)
@@ -596,7 +598,7 @@ class MyCanvas(QLabel):
             if (self.parent.drawing_process.current_index == -1):
                 record_tmp = []
             else:
-                record_tmp = copy.deepcopy(
+                record_tmp = deepcopy(
                     self.parent.drawing_process.record_list[self.parent.drawing_process.current_index])
             record_tmp.append(tmp)
             self.parent.drawing_process.record_list.append(record_tmp)
@@ -638,7 +640,7 @@ class MyCanvas(QLabel):
                 if (len(self.parent.drawing_process.record_list) != 1 + self.parent.drawing_process.current_index):
                     del self.parent.drawing_process.record_list[1 + self.parent.drawing_process.current_index:]
 
-                record_tmp = copy.deepcopy(
+                record_tmp = deepcopy(
                     self.parent.drawing_process.record_list[self.parent.drawing_process.current_index])
                 record_tmp[self.currentChoose].setOpFirstPoint(s.x(), s.y())
                 record_tmp[self.currentChoose].setOperatingPoint(s.x(), s.y())
@@ -661,7 +663,7 @@ class MyCanvas(QLabel):
             if (len(self.parent.drawing_process.record_list) != 1 + self.parent.drawing_process.current_index):
                 del self.parent.drawing_process.record_list[1 + self.parent.drawing_process.current_index:]
 
-            record_tmp = copy.deepcopy(self.parent.drawing_process.record_list[self.parent.drawing_process.current_index])
+            record_tmp = deepcopy(self.parent.drawing_process.record_list[self.parent.drawing_process.current_index])
             record_tmp[self.currentChoose].setOpFirstPoint(s.x(),s.y())
             self.parent.drawing_process.record_list[self.parent.drawing_process.current_index][self.currentChoose].isOperating=0
             self.parent.drawing_process.record_list.append(record_tmp)
@@ -690,7 +692,7 @@ class MyCanvas(QLabel):
                 if (len(self.parent.drawing_process.record_list) != 1 + self.parent.drawing_process.current_index):
                     del self.parent.drawing_process.record_list[1 + self.parent.drawing_process.current_index:]
 
-                record_tmp = copy.deepcopy(
+                record_tmp = deepcopy(
                     self.parent.drawing_process.record_list[self.parent.drawing_process.current_index])
                 record_tmp[self.currentChoose].setOpFirstPoint(s.x(), s.y())
                 self.parent.drawing_process.record_list[self.parent.drawing_process.current_index][
@@ -717,7 +719,7 @@ class MyCanvas(QLabel):
                 if (len(self.parent.drawing_process.record_list) != 1 + self.parent.drawing_process.current_index):
                     del self.parent.drawing_process.record_list[1 + self.parent.drawing_process.current_index:]
 
-                record_tmp = copy.deepcopy(
+                record_tmp = deepcopy(
                     self.parent.drawing_process.record_list[self.parent.drawing_process.current_index])
                 record_tmp[self.currentChoose].setOpFirstPoint(s.x(), s.y())
                 self.parent.drawing_process.record_list[self.parent.drawing_process.current_index][
@@ -749,7 +751,7 @@ class MyCanvas(QLabel):
                 if (len(self.parent.drawing_process.record_list) != 1 + self.parent.drawing_process.current_index):
                     del self.parent.drawing_process.record_list[1 + self.parent.drawing_process.current_index:]
 
-                record_tmp = copy.deepcopy(
+                record_tmp = deepcopy(
                     self.parent.drawing_process.record_list[self.parent.drawing_process.current_index])
                 record_tmp[self.currentChoose].setOpFirstPoint(s.x(), s.y())
                 record_tmp[self.currentChoose].setOpSecondPoint(s.x(), s.y())
@@ -779,7 +781,7 @@ class MyCanvas(QLabel):
                 if (len(self.parent.drawing_process.record_list) != 1 + self.parent.drawing_process.current_index):
                     del self.parent.drawing_process.record_list[1 + self.parent.drawing_process.current_index:]
 
-                record_tmp = copy.deepcopy(
+                record_tmp = deepcopy(
                     self.parent.drawing_process.record_list[self.parent.drawing_process.current_index])
                 record_tmp[self.currentChoose].setOpFirstPoint(s.x(), s.y())
                 record_tmp[self.currentChoose].setOpSecondPoint(s.x(), s.y())
@@ -808,7 +810,7 @@ class MyCanvas(QLabel):
                 if (len(self.parent.drawing_process.record_list) != 1 + self.parent.drawing_process.current_index):
                     del self.parent.drawing_process.record_list[1 + self.parent.drawing_process.current_index:]
 
-                record_tmp = copy.deepcopy(
+                record_tmp = deepcopy(
                     self.parent.drawing_process.record_list[self.parent.drawing_process.current_index])
                 record_tmp[self.currentChoose].isFilled = (record_tmp[self.currentChoose].isFilled==False)
                 record_tmp[self.currentChoose].setFilledColor(self.penColor.red(), self.penColor.green(), self.penColor.blue())
@@ -838,7 +840,7 @@ class MyCanvas(QLabel):
                 if (len(self.parent.drawing_process.record_list) != 1 + self.parent.drawing_process.current_index):
                     del self.parent.drawing_process.record_list[1 + self.parent.drawing_process.current_index:]
 
-                record_tmp = copy.deepcopy(
+                record_tmp = deepcopy(
                     self.parent.drawing_process.record_list[self.parent.drawing_process.current_index])
                 record_tmp[self.currentChoose].setOpFirstPoint(s.x(), s.y())
                 record_tmp[self.currentChoose].setOpSecondPoint(s.x(), s.y())
@@ -867,7 +869,7 @@ class MyCanvas(QLabel):
                 if (len(self.parent.drawing_process.record_list) != 1 + self.parent.drawing_process.current_index):
                     del self.parent.drawing_process.record_list[1 + self.parent.drawing_process.current_index:]
 
-                record_tmp = copy.deepcopy(
+                record_tmp = deepcopy(
                     self.parent.drawing_process.record_list[self.parent.drawing_process.current_index])
                 record_tmp[self.currentChoose].setOpFirstPoint(s.x(), s.y())
                 record_tmp[self.currentChoose].setOpSecondPoint(s.x(), s.y())
@@ -1610,12 +1612,12 @@ class MyCanvas(QLabel):
         if (self.parent.drawing_process.current_index == -1):
             record_tmp = []
         else:
-            record_tmp = copy.deepcopy(
+            record_tmp = deepcopy(
                 self.parent.drawing_process.record_list[self.parent.drawing_process.current_index])
         self.parent.drawing_process.record_list[self.parent.drawing_process.current_index][
             self.currentChoose].isOperating = 0
 
-        record_tmp.append(copy.deepcopy(self.CopyFigure))
+        record_tmp.append(deepcopy(self.CopyFigure))
         self.parent.drawing_process.record_list.append(record_tmp)
         leng = len(self.parent.drawing_process.record_list[self.parent.drawing_process.current_index + 1])
         p = self.CopyFigure.getCentre()
@@ -1970,7 +1972,7 @@ class MyCanvas(QLabel):
                 if (self.parent.drawing_process.current_index == -1):
                     record_tmp = []
                 else:
-                    record_tmp = copy.deepcopy(
+                    record_tmp = deepcopy(
                         self.parent.drawing_process.record_list[self.parent.drawing_process.current_index])
                 record_tmp.append(tmp)
                 self.parent.drawing_process.record_list.append(record_tmp)

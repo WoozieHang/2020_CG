@@ -628,7 +628,7 @@ class MyWindow(QMainWindow, Ui_MainWindow):
     @QtCore.pyqtSlot()
     def on_actionAbout_triggered(self):
         self.synState()
-        QMessageBox.about(self, '关于\'画图\'', '版本1.0\n\n@2020 吴紫航。保留所有权利\n\n联系邮箱:401986905@qq.com\n\n地址:南京大学仙林大道163\n')
+        QMessageBox.about(self, '关于\'画图\'', '版本1.0\n\n@2020 吴紫航。保留所有权利\n\n联系邮箱:401986905@qq.com\n\n地址:南京大学仙林校区\n')
 
     def resetByWH(self,w,h):
         self.my_canvas.setGeometry(0, 0, w, h)

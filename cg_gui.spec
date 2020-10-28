@@ -3,7 +3,7 @@
 block_cipher = None
 
 
-a = Analysis(['cg_gui.py'],
+a = Analysis(['D:\\MyFile\\python\\MyCanvas - end\\cg_gui.py'],
              pathex=['D:\\MyFile\\python\\MyCanvas - end'],
              binaries=[],
              datas=[],
@@ -30,4 +30,4 @@ exe = EXE(pyz,
           upx=True,
           upx_exclude=[],
           runtime_tmpdir=None,
-          console=True )
+          console=False )
